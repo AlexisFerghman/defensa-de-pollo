@@ -19,6 +19,7 @@ class Pantalla():
         pygame.draw.rect(self.DISPLAYSURF, self.vMapa.rectangulo2[0], self.vMapa.rectangulo2[1])
         pygame.draw.rect(self.DISPLAYSURF, self.vMapa.rectangulo3[0], self.vMapa.rectangulo3[1])
         pygame.draw.rect(self.DISPLAYSURF, self.vMapa.rectangulo4[0], self.vMapa.rectangulo4[1])
+        pygame.draw.rect(self.DISPLAYSURF, self.vMapa.rectangulo5[0], self.vMapa.rectangulo5[1])
 
     def actualiza_pantalla(self):
         self.DISPLAYSURF.fill(vGlobales.verde)

@@ -10,6 +10,7 @@ class Mapa:
         self.rectangulo2 = [vGlobales.suelo, pygame.Rect(50, 50, 30, 300)]
         self.rectangulo3 = [vGlobales.suelo, pygame.Rect(80, 50, 600,30)]
         self.rectangulo4 = [vGlobales.suelo, pygame.Rect(680, 50, 30, 100)]
+        self.rectangulo5 = [vGlobales.suelo, pygame.Rect(680, 150, 175, 30)]
         
         #medio
 
