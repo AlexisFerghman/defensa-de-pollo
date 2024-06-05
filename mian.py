@@ -1,4 +1,4 @@
-import pygame, sys, pantalla, globales, enemigo, base
+import pygame, sys, pantalla, globales, enemigo, base, arma
 
 #DATOS
 vGlobales = globales.Globales()
@@ -12,8 +12,8 @@ pygame.init()
 malo1= enemigo.Enemigo()
 
 base1 = base.Base()
-
-
+a = arma.Arma(pygame.Rect(30,380,5,5),1,2)
+a.agregar_nueva_bala(malo1)
 while True:
     #EVENTOS
     for event in pygame.event.get():
@@ -28,6 +28,9 @@ while True:
 
     #movimiento malitos
     malo1.movimiento()
+
+    #movimientos balas
+    vPantalla.actualiza_balas(a, [malo1])
 
     pygame.display.flip()
     vGlobales.RELOJ.tick(vGlobales.FPS)
