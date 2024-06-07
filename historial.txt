@@ -1,0 +1,8 @@
+05-06
+agregue disparos con un click
+corregui parcialmente la trayectoria de las balas
+
+PENDIENTE
+poder trabajar la posicion de las balas con decimales segun la pantalla
+hacer la clase balas
+
