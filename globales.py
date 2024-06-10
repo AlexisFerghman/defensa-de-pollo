@@ -31,3 +31,9 @@ class Globales():
         #FPS
         self.FPS = 60
         self.RELOJ = pygame.time.Clock()
+
+    def transforma_int (self, _lista):
+        lista_int = []
+        for i in range (len(_lista)):
+            lista_int+= [int(_lista[i])]
+        return lista_int

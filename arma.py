@@ -9,14 +9,18 @@ class Arma:
         self.balas = []
         self.velocidad = _velocidad
 
+
+    def dispara_bala (self, enemigo):
+        self.agregar_nueva_bala(enemigo)
+
+
 #crea una bala nueva con cada llamada la añade a la lista y actualiza
     def agregar_nueva_bala (self, enemigo):
-        bala = balas.Balas(self.rect)
-        angulo = math.atan2((enemigo.rect.centery - bala.rect.centery),(enemigo.rect.centerx - bala.rect.centerx))
+        bala = balas.Balas(self.rect, 5)
+        angulo = math.atan2((enemigo.rect.centery + enemigo.vector[1]*3 - bala.rect.centery),(enemigo.rect.centerx + enemigo.vector[0]*3 - bala.rect.centerx))
         bala.set_angulo(angulo)
         self.balas.append(bala)
-        print(self.balas[0].posicion[0])
-
+        
     def mueve_balas (self):
         for i in range (len(self.balas)):
             print(i+1)

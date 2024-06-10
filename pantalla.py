@@ -33,6 +33,12 @@ class Pantalla():
     def actualiza_base(self, base):
         pygame.draw.rect(self.DISPLAYSURF, base.color, base.rect)
 
+    #Actualiza todas las armas
+    def actualiza_arma(self, armas):
+        for i in range(len(armas)):
+            pygame.draw.rect(self.DISPLAYSURF, armas[i].color, vGlobales.transforma_int(armas[i].rect))
+
+#Recibe una lista de armas, para recorrerla y actualiza la posicionde cada una de las balas   
     def actualiza_balas(self, armas, malito):
         for j in range (len(armas)):
             tempLista = self.genera_lista_colision([malito])
@@ -40,7 +46,6 @@ class Pantalla():
                 pygame.draw.rect(self.DISPLAYSURF, vGlobales.AZUL, armas[j].balas[i].rect)
                 armas[j].mueve_balas()
                 if not pygame.Rect.collidelist(armas[j].balas[i].rect, tempLista):
-                    print('muerte')
                     armas[j].elimina_bala(i)
 
     def genera_terreno1(self):

@@ -12,7 +12,7 @@ pygame.init()
 malo1= enemigo.Enemigo()
 
 base1 = base.Base()
-a = arma.Arma(pygame.Rect(30,380,5,5),1,2)
+a = arma.Arma(pygame.Rect(30,380,5,5), vGlobales.naranjo ,2)
 a.agregar_nueva_bala(malo1)
 armas = [a]
 
@@ -26,14 +26,15 @@ while True:
             sys.exit()
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
-                temp_arma = arma.Arma(pygame.Rect((event.pos), (5,5)),1,random.randint(1,5))
-                temp_arma.agregar_nueva_bala(malo1)
+                temp_arma = arma.Arma(pygame.Rect((event.pos), (10,10)), vGlobales.naranjo ,random.randint(3,8))
+                temp_arma.dispara_bala(malo1)
                 armas.append(temp_arma)
     
     vPantalla.actualiza_pantalla()
     vPantalla.actualiza_suelo()
     vPantalla.actualiza_malito(malo1)
     vPantalla.actualiza_base(base1)
+    vPantalla.actualiza_arma(armas)
 
     #movimiento malitos
     malo1.movimiento()

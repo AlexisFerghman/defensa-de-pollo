@@ -6,3 +6,16 @@ PENDIENTE
 poder trabajar la posicion de las balas con decimales segun la pantalla
 hacer la clase balas
 
+06-06
+agregue clase balas
+corregui trayectoria de las balas
+
+PENDIENTE
+posible bug con funcion balas.actualiza_posicion
+terminar torretas
+
+
+
+IDEAS
+criticos
+
