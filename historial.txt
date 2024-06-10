@@ -10,9 +10,13 @@ hacer la clase balas
 agregue clase balas
 corregui trayectoria de las balas
 
+10-06
+Modificque las clases para que ahora si aparezcan las torretas
+Aparecen las torretas con el click
+
 PENDIENTE
-posible bug con funcion balas.actualiza_posicion
-terminar torretas
+hacer que las torretas disparen cada cierto tiempo
+
 
 
 
